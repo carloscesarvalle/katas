@@ -79,10 +79,13 @@ const duplicateEncode = str => {
    
 
 //Third Solution using regular expression and ternary operator
+
+const duplicateEncode = str =>  {
+  lowerCaseString = str.toLowerCase()
 //  "/./" is to refer to every element from the string
 // "g" tells to not to stop after replacing the first element that follows the condition, but all elements that follow the condition
-const duplicateEncode = str =>  str.replace(/./g, element => indexOf(element)===lastIndexOf(element)? '(' : ')')
-
+  return lowerCaseString.replace(/./g, element =>  lowerCaseString.indexOf(element)===  lowerCaseString.lastIndexOf(element)? '(' : ')')
+  }
   
 
 
