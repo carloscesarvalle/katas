@@ -77,6 +77,15 @@ const duplicateEncode = str => {
   .join('')
   }
    
+
+//Third Solution using regular expression and ternary operator
+//  "/./" is to refer to every element from the string
+// "g" tells to not to stop after replacing the first element that follows the condition, but all elements that follow the condition
+const duplicateEncode = str =>  str.replace(/./g, element => indexOf(element)===lastIndexOf(element)? '(' : ')')
+
+  
+
+
    //Tests 
     
    duplicateEncode(" ( ( )")
