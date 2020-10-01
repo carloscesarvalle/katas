@@ -29,7 +29,7 @@
 //     // console.log(duplicates)  
      
       
-//     //Conditional. I'm comparing 2 arrays: array and duplicates. I loop thru each element of array to see if it is a duplicate. If it is, I push ')' into a new array called result. If it is not a duplicate and I didn't push ')', i'll push '(' after checking that that array value in that particular index is undefined.
+//     //Conditional. I'm comparing 2 arrays: array and duplicates. I loop thru each element of array to see if it is a duplicate. If it is, I'll push ')' into a new array called result. If it is not a duplicate and I didn't push ')', i'll push '(' after checking that that array value in that particular index is undefined.
      
       
 //      let result = []
@@ -43,14 +43,14 @@
 //                }
              
 //            }
-//            // condition inside the parent loop (that uses "i") if nothing is push to array result in that particular index   
+//            // condition inside the parent loop (that uses "i") if nothing is pushed to array result in that particular index   
 //            if(result[i]===undefined){
 //            result.push('(')
 //        }
        
 //      }
     
-//     //Declaring new variable finalResult that is going to be all elements from result join together as a string  
+//     //Declaring new variable finalResult that is going to be all elements from result joined together as a string  
 //     let finalResult = result.join('')
       
 //     console.log(finalResult)
