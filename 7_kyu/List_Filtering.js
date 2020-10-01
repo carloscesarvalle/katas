@@ -24,4 +24,4 @@ filter_list = arr => {
 }
 
 
-  console.log(filter_list([1,2,'aasf','1','123',123]) == [1,2,123])
+  console.log(filter_list([1,2,'aasf','1','123',123]))
