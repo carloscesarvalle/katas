@@ -9,56 +9,73 @@
 
 
 
-// First Solution using for loops
+// First Solution using for for loops
 
-const duplicateEncode = str => {
+// const duplicateEncode = str => {
  
-    //Convert the string to lower case to avoid capitalization differences, and splitting the string into an array separated by commas 
-    let array = str.toLowerCase().split('')
-    // console.log(array)
+//     //Convert the string to lower case to avoid capitalization differences, and splitting the string into an array separated by commas 
+//     let array = str.toLowerCase().split('')
+//     // console.log(array)
     
-    //Looping inside the new array in order to check for duplicates. If one or more are found, push them inside duplicates array only if they are not there already.
-    let duplicates =[]
-    for(i=0; i<array.length; i++){
-         for(j=i+1; j<array.length; j++){
-             if((array[i]===array[j])&(duplicates.indexOf(array[i])===-1)) {
-             duplicates.push(array[i])
-        }  
-      } 
-    }
-    // console.log(duplicates)  
+//     //Looping inside the new array in order to check for duplicates. If one or more are found, push them inside duplicates array only if they are not there already.
+//     let duplicates =[]
+//     for(i=0; i<array.length; i++){
+//          for(j=i+1; j<array.length; j++){
+//              if((array[i]===array[j])&(duplicates.indexOf(array[i])===-1)) {
+//              duplicates.push(array[i])
+//         }  
+//       } 
+//     }
+//     // console.log(duplicates)  
      
       
-    //Conditional. I'm comparing 2 arrays: array and duplicates. I loop thru each element of array to see if it is a duplicate. If it is, I push ')' into a new array called result. If it is not a duplicate and I didn't push ')', i'll push '(' after checking that that array value in that particular index is undefined.
+//     //Conditional. I'm comparing 2 arrays: array and duplicates. I loop thru each element of array to see if it is a duplicate. If it is, I push ')' into a new array called result. If it is not a duplicate and I didn't push ')', i'll push '(' after checking that that array value in that particular index is undefined.
      
       
-     let result = []
+//      let result = []
       
-     for (i=0; i<array.length; i++){
-           //loop inside a loop to check for duplicates. The child loop uses "j".
-           for (j=0; j<duplicates.length; j++){
+//      for (i=0; i<array.length; i++){
+//            //loop inside a loop to check for duplicates. The child loop uses "j".
+//            for (j=0; j<duplicates.length; j++){
               
-               if(array[i]===duplicates[j]){
-                 result.push(')')
-               }
+//                if(array[i]===duplicates[j]){
+//                  result.push(')')
+//                }
              
-           }
-           // condition inside the parent loop (that uses "i") if nothing is push to array result in that particular index   
-           if(result[i]===undefined){
-           result.push('(')
-       }
+//            }
+//            // condition inside the parent loop (that uses "i") if nothing is push to array result in that particular index   
+//            if(result[i]===undefined){
+//            result.push('(')
+//        }
        
-     }
+//      }
     
-    //Declaring new variable finalResult that is going to be all elements from result join together as a string  
-    let finalResult = result.join('')
+//     //Declaring new variable finalResult that is going to be all elements from result join together as a string  
+//     let finalResult = result.join('')
       
-    console.log(finalResult)
-    return finalResult
+//     console.log(finalResult)
+//     return finalResult
       
+//     }
+   
+   
+// Second Solution using map with 3 parameters
+
+const duplicateEncode = str => { 
+  return str
+  //Creating a new array
+  .split('')
+  //Mapping the array and finding unique elements based on index positions
+  .map((element, index, array)=>{
+    if (array.indexOf(element) === array.lastIndexOf(element)) {
+      return '('
+    } else {
+      return ')'
     }
-   
-   
+  })
+  //Converting the array into a string
+  .join('')
+  }
    
    //Tests 
     
