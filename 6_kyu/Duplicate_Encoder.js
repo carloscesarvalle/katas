@@ -53,7 +53,7 @@ const duplicateEncode = str => {
     //Declaring new variable finalResult that is going to be all elements from result join together as a string  
     let finalResult = result.join('')
       
-    // console.log(finalResult)
+    console.log(finalResult)
     return finalResult
       
     }
