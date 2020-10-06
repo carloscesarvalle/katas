@@ -4,7 +4,7 @@
 
 
 
-// Solution using map, terciary operator and reduce
+// First solution using map, terciary operator and reduce
 
 function repeats(arr){
 
@@ -17,5 +17,17 @@ function repeats(arr){
     //In arrow functions with simple syntax we don't need return.
     .reduce((accumulator, currentValue) => accumulator + currentValue)
    
-};
+}
 
+
+//Second solution using filter and reduce
+
+function repeats(arr){
+
+return arr
+//I'll filter the elements from the array that follows this condition: arr.indexOf(element) === arr.lastIndexOf(element)
+.filter(element => arr.indexOf(element) === arr.lastIndexOf(element))
+//I will sum all the filtered values
+.reduce((accumulator, currentValue) => accumulator + currentValue)
+
+}
