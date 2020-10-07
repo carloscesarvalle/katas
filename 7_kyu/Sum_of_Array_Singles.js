@@ -4,7 +4,7 @@
 
 
 
-// First solution using map, terciary operator and reduce
+// First solution using map, ternary operator and reduce
 
 function repeats(arr){
 

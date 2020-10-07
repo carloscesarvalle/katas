@@ -9,7 +9,7 @@
 
 
 
-// First Solution using for for loops
+// First Solution using for loops
 
 // const duplicateEncode = str => {
  
@@ -63,6 +63,7 @@
 
 const duplicateEncode = str => { 
   return str
+  .toLowerCase()
   //Creating a new array
   .split('')
   //Mapping the array and finding unique elements based on index positions
