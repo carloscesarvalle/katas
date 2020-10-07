@@ -9,33 +9,35 @@ toCamelCase = str => {
 //  //I'm using 3 possibilities: ("-", "_" and " ")
   
     if (str.split('-').length > 1) {
-     return str.split('-') 
-    .map((element, index)=>{
-       
-       if(index!==0){
-         return element[0].toUpperCase() + element.slice(1)
-       }
-       else {
-         return element
-       }
-       
-     })
-    .join('')  
+     return str
+        .split('-') 
+        .map((element, index)=>{
+        
+        if(index!==0){
+            return element[0].toUpperCase() + element.slice(1)
+        }
+        else {
+            return element
+        }
+        
+        })
+        .join('')  
     }
     
     else if (str.split('_').length > 1) {
-      return str.split('_') 
-      .map((element, index)=>{
-       
-       if(index!==0){
-         return element[0].toUpperCase() + element.slice(1)
-       }
-       else {
-         return element
-       }
-       
-     })
-      .join('') 
+      return str
+        .split('_') 
+        .map((element, index)=>{
+        
+        if(index!==0){
+            return element[0].toUpperCase() + element.slice(1)
+        }
+        else {
+            return element
+        }
+        
+        })
+        .join('') 
     }
     
       else {
@@ -47,14 +49,16 @@ toCamelCase = str => {
 //Second Solution using regular expression
 
 toCamelCase = str => {
+   
     return str
-      .split(/-|_/g)
-      .map((element, index) => {return index > 0 ? element.charAt(0) + element.slice(1) : element})
-      .join('');
- 
+          .split(/-|_/g)
+          .map((element, index) => {return index > 0 ? element[0].toUpperCase() + element.slice(1) : element })
+          .join('');
+     
+   
  }
 
- 
+
 //Test
 
 
