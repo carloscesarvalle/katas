@@ -59,6 +59,25 @@ toCamelCase = str => {
  }
 
 
+ //Third Solution using for loop
+
+ toCamelCase = str => {
+
+    let newArr = ''
+    for(i=0; i<str.length; i++){
+      if(str[i]==='-' || str[i]==='_') {
+        newArr += str[i+1].toUpperCase()
+        i++
+        
+      } else {
+        newArr += str[i]
+      }
+    }
+    
+    return newArr
+    
+  }
+
 //Test
 
 
